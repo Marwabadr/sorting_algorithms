@@ -30,7 +30,7 @@ void swap(int *a, int *b);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void quicksort(int *array, int low, int high, size_t size);
 void quick_sort(int *array, size_t size);
-/*function for shell sort*/
+/*function for shell sort and sort list*/
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 listint_t *swap_nodes(listint_t **list, listint_t *noeud);

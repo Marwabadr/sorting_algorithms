@@ -42,9 +42,10 @@ void cocktail_sort_list(listint_t **list)
 	}
 }
 /**
- *swap_nodes - Swaps two nodes in a doubly linked list.
- *@list: Double pointer to the head of the linked list.
- *@noeud: node to be swapped
+ *swap_nodes - swap a node for his previous one
+ *@noeud: node
+ *@list: linked list
+ *Return: return a pointer to a node swapped
  */
 listint_t *swap_nodes(listint_t **list, listint_t *noeud)
 {
