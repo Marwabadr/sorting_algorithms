@@ -34,7 +34,7 @@ void cocktail_sort_list(listint_t **list)
 			{
 				swap_nodes(list, curr->prev, curr);
 				print_list(*list);
-				swapp = 1;
+				swap = 1;
 			}
 		}
 	} while (swap);
