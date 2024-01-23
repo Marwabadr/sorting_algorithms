@@ -6,38 +6,38 @@
  */
 void cocktail_sort_list(listint_t **list)
 {
-	int swapped;
-	listint_t *current;
+	int swap;
+	listint_t *curr;
 
 	if (list == NULL || *list == NULL)
 		return;
 
 	do {
-		swapped = 0;
-		for (current = *list; current->next != NULL; current = current->next)
+		swap = 0;
+		for (curr = *list; curr->next != NULL; curr = curr->next)
 		{
-			if (current->n > current->next->n)
+			if (curr->n > curr->next->n)
 			{
-				swap_nodes(list, current, current->next);
+				swap_nodes(list, curr, curr->next);
 				print_list(*list);
-				swapped = 1;
+				swap = 1;
 			}
 		}
 
-		if (!swapped)
+		if (!swap)
 			break;
 
-		swapped = 0;
-		for (; current->prev != NULL; current = current->prev)
+		swap = 0;
+		for (; curr->prev != NULL; curr = curr->prev)
 		{
-			if (current->n < current->prev->n)
+			if (curr->n < curr->prev->n)
 			{
-				swap_nodes(list, current->prev, current);
+				swap_nodes(list, curr->prev, curr);
 				print_list(*list);
-				swapped = 1;
+				swapp = 1;
 			}
 		}
-	} while (swapped);
+	} while (swap);
 }
 /**
  *swap_nodes - Swaps two nodes in a doubly linked list.
