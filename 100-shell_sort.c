@@ -1,5 +1,16 @@
 #include "sort.h"
 /**
+*swap - the positions of two elements into an array
+*@a: Pointer to the first integer
+*@b: Pointer to the second integer
+*/
+void swap(int *a, int *b)
+{
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+}
+/**
  *shell_sort - Sorts an array of integers in ascending order using Shell sort
  *algorithm with Knuth sequence.
  *@array: The array to be sorted
