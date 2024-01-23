@@ -6,39 +6,38 @@
  */
 void cocktail_sort_list(listint_t **list)
 {
+	listint_t *noeud;
 	int swapped = 1;
-	listint_t *start, *end;
 
-	if (list == NULL || *list == NULL)
+	if (list == '\0' || (*list) == '\0' || (*list)->next == '\0')
 		return;
-
-	while (swapped)
+	noeud = *list;
+	while (swapped == 1)
 	{
 		swapped = 0;
-		for (start = *list; start->next != end; start = start->next)
+		while (noeud->next)
 		{
-			if (start->n > start->next->n)
+			if (noeud->n > noeud->next->n)
 			{
-				swap_nodes(list, start, start->next);
-				print_list(*list);
+				noeud = swap_node(noeud->next, list);
 				swapped = 1;
+				print_list(*list);
 			}
+			noeud = noeud->next;
 		}
-
-		if (!swapped)
+		if (swapped == 0)
 			break;
-
 		swapped = 0;
-		end = start;
-
-		for (start = start->prev; start->prev != NULL; start = start->prev)
+		while (noeud->prev)
 		{
-			if (start->n > start->next->n)
+			if (noeud->n < noeud->prev->n)
 			{
-				swap_nodes(list, start, start->next);
-				print_list(*list);
+				noeud = swap_node(noeud, list);
 				swapped = 1;
+				print_list(*list);
 			}
+			else
+				noeud = noeud->prev;
 		}
 	}
 }
