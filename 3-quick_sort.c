@@ -1,9 +1,9 @@
 #include "sort.h"
 /**
- * swap - Swaps two integers in an array and prints the array
- * @a: Pointer to the first integer
- * @b: Pointer to the second integer
- */
+*swap - the positions of two elements into an array
+*@a: Pointer to the first integer
+*@b: Pointer to the second integer
+*/
 void swap(int *a, int *b)
 {
 	int temp = *a;
@@ -11,12 +11,12 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 /**
- * lomuto_partition - Lomuto partition scheme for quicksort
- * @array: Array to be sorted
- * @low: Starting index of the partition to be sorted
- * @high: Ending index of the partition to be sorted
- * @size: Size of the array
- * Return: Index of the pivot element after partitioning
+ *lomuto_partition - Lomuto partition scheme for quicksort
+ *@array: Array to be sorted
+ *@low: Starting index of the partition to be sorted
+ *@high: Ending index of the partition to be sorted
+ *@size: Size of the array
+ *Return: Index of the pivot element after partitioning
  */
 int lomuto_partition(int *array, int low, int high, size_t size)
 {
@@ -45,11 +45,11 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 	return (i + 1);
 }
 /**
- * quick_sort_recursive - Recursive function to perform quicksort
- * @array: Array to be sorted
- * @low: Starting index of the partition to be sorted
- * @high: Ending index of the partition to be sorted
- * @size: Size of the array
+ *quick_sort_recursive - Recursive function to perform quicksort
+ *@array: Array to be sorted
+ *@low: Starting index of the partition to be sorted
+ *@high: Ending index of the partition to be sorted
+ *@size: Size of the array
  */
 void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
@@ -62,9 +62,9 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
 	}
 }
 /**
- * quick_sort - Function to sort an array using quicksort algorithm
- * @array: Array to be sorted
- * @size: Size of the array
+ *quick_sort - Function to sort an array using quicksort algorithm
+ *@array: Array to be sorted
+ *@size: Size of the array
  */
 void quick_sort(int *array, size_t size)
 {
