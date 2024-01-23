@@ -6,9 +6,9 @@
 */
 void swap(int *a, int *b)
 {
-        int temp = *a;
-        *a = *b;
-        *b = temp;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 /**
  * shell_sort - Sorts an array of integers in ascending order using
@@ -19,7 +19,7 @@ void swap(int *a, int *b)
 void shell_sort(int *array, size_t size)
 {
 	size_t gap = 1, i, j;
-       
+
 	while (gap < size / 3)
 		gap = gap * 3 + 1;
 
@@ -28,7 +28,7 @@ void shell_sort(int *array, size_t size)
 		for (i = gap; i < size; i++)
 		{
 			int temp = array[i];
-			
+
 			for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
 			{
 				swap(&array[j], &array[j - gap]);
@@ -36,7 +36,7 @@ void shell_sort(int *array, size_t size)
 		}
 
 		print_array(array, size);
-		
+
 		gap = (gap - 1) / 3;
 	}
 }
