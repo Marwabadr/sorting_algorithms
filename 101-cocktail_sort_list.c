@@ -46,7 +46,7 @@ void cocktail_sort_list(listint_t **list)
  *@list: Double pointer to the head of the linked list.
  *@noeud: node to be swapped
  */
-listint_t swap_nodes(listint_t **list, listint_t *noeud)
+listint_t *swap_nodes(listint_t **list, listint_t *noeud)
 {
 	listint_t *prec = noeud->prev, *actuel = noeud;
 
