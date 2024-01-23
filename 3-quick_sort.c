@@ -12,7 +12,6 @@ void swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
-
 /**
  * lomuto_partition - Lomuto partition scheme for quicksort
  * @array: Array to be sorted
@@ -49,7 +48,6 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 
     return (i + 1);
 }
-
 /**
  * quick_sort_recursive - Recursive function to perform quicksort
  * @array: Array to be sorted
@@ -67,7 +65,6 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
         quick_sort_recursive(array, pivot_index + 1, high, size);
     }
 }
-
 /**
  * quick_sort - Function to sort an array using quicksort algorithm
  * @array: Array to be sorted
@@ -77,7 +74,5 @@ void quick_sort(int *array, size_t size)
 {
     if (array == NULL || size < 2)
         return;
-
     quick_sort_recursive(array, 0, size - 1, size);
 }
-
