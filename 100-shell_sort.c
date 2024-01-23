@@ -27,9 +27,7 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = gap; i < size; i++)
 		{
-			int temp = array[i];
-
-			for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+			for (j = i; j >= gap && array[j - gap] > array[j]; j -= gap)
 			{
 				swap(&array[j], &array[j - gap]);
 			}
@@ -38,5 +36,4 @@ void shell_sort(int *array, size_t size)
 		print_array(array, size);
 
 		gap = (gap - 1) / 3;
-	}
 }
